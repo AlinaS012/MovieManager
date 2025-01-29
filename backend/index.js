@@ -135,7 +135,7 @@ function initRouters(app, client) {
     await client.connect();
       
     client.query('SELECT $1::text as message', ['Hello world!']).then(() => {
-        const app = express();
+        const app = express()
         app.use(cors({
             origin: 'http://localhost:3000',
         }))
